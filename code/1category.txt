@@ -1,0 +1,18 @@
+CREATE TABLE Category (
+    Category_ID INT PRIMARY KEY,
+    Category_Name VARCHAR(50) NOT NULL,
+    Description TEXT
+);
+
+
+
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(1, 'Flowering Plants', 'Plants that produce flowers');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(2, 'Succulents', 'Drought-resistant plants with thick leaves');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(3, 'Herbs', 'Edible and medicinal plants');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(4, 'Ferns', 'Non-flowering plants with feathery leaves');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(5, 'Shrubs', 'Bushy plants that can grow to be several feet tall');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(6, 'Trees', 'Larger plants for outdoor planting');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(7, 'Vegetables', 'Edible plants for cooking');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(8, 'Cacti', 'Spiky desert plants that require little water');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(9, 'Vines', 'Plants that grow with long, trailing stems');
+INSERT INTO Category (Category_ID, Category_Name, Description) VALUES(10, 'Ornamental Grasses', 'Grass-like plants used for landscaping');

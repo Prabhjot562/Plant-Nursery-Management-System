@@ -1,0 +1,24 @@
+CREATE TABLE Plants (
+    Plant_ID INT PRIMARY KEY,
+    Plant_Name VARCHAR(50) NOT NULL,
+    Category_ID INT,
+    Plant_Description VARCHAR(200),
+    Price DECIMAL(10, 2) NOT NULL,
+    Stock_Quantity INT DEFAULT 0,
+    Watering_Frequency VARCHAR(20),
+    FOREIGN KEY (Category_ID) REFERENCES Category(Category_ID)
+);
+
+
+
+
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(1, 'Rose', 1, 'Beautiful red roses with a sweet fragrance', 15.00, 100, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(2, 'Lavender', 3, 'Aromatic herb used in cooking and fragrances', 20.00, 50, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(3, 'Aloe Vera', 2, 'Succulent plant with medicinal uses', 10.00, 200, 'Bi-weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(4, 'Boston Fern', 4, 'Popular houseplant with feathery fronds', 18.00, 75, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(5, 'Basil', 3, 'Herb with culinary and medicinal applications', 5.00, 120, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(6, 'Snake Plant', 2, 'Easy-care plant with upright leaves', 12.00, 90, 'Bi-weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(7, 'Spider Plant', 1, 'Low-maintenance plant with trailing leaves', 8.00, 150, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(8, 'Mint', 3, 'Versatile herb used in cooking and teas', 4.00, 130, 'Weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(9, 'Ficus', 5, 'Popular indoor tree for home decor', 30.00, 40, 'Bi-weekly');
+INSERT INTO Plants (Plant_ID, Plant_Name, Category_ID, Plant_Description, Price, Stock_Quantity, Watering_Frequency) VALUES(10, 'Pothos', 9, 'Hardy vine with heart-shaped leaves', 7.00, 60, 'Weekly');

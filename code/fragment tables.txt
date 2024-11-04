@@ -1,0 +1,14 @@
+-- Flower Plants Fragment
+CREATE TABLE Plants_Flowers AS 
+SELECT * FROM Plants
+WHERE Category_ID = 1;
+
+-- Herbs and Succulents Fragment
+CREATE TABLE Plants_Herbs_Succulents AS 
+SELECT * FROM Plants
+WHERE Category_ID IN (2, 3);
+
+-- Trees and Large Plants Fragment
+CREATE TABLE Plants_Trees AS 
+SELECT * FROM Plants
+WHERE Category_ID > 3;

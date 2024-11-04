@@ -1,0 +1,24 @@
+CREATE TABLE PlantSuppliers (
+    Supplier_ID INT,
+    Plant_ID INT,
+    Supply_Price DECIMAL(10, 2) NOT NULL,
+    Supply_Quantity INT NOT NULL,
+    PRIMARY KEY (Supplier_ID, Plant_ID),
+    FOREIGN KEY (Supplier_ID) REFERENCES Suppliers(Supplier_ID),
+    FOREIGN KEY (Plant_ID) REFERENCES Plants(Plant_ID)
+);
+
+
+
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(1, 1, 12.00, 50);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(1, 2, 18.00, 20);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(2, 3, 8.00, 100);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(2, 4, 15.00, 40);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(3, 5, 4.50, 75);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(4, 6, 10.00, 60);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(5, 7, 6.50, 30);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(6, 8, 3.50, 120);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(7, 9, 28.00, 15);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(8, 10, 5.50, 25);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(9, 1, 13.00, 40);
+INSERT INTO PlantSuppliers (Supplier_ID, Plant_ID, Supply_Price, Supply_Quantity) VALUES(10, 2, 19.00, 15);

@@ -1,0 +1,150 @@
+1. Total Sales by Each Customer
+SELECT 
+    C.Customer_Name,
+    C.Email,
+    SUM(O.Total_Amount) AS Total_Sales
+FROM 
+    Customers C
+JOIN 
+    Orders O ON C.Customer_ID = O.Customer_ID
+GROUP BY 
+    C.Customer_ID
+ORDER BY 
+    Total_Sales DESC;
+
+
+2. List of Plants with Stock Below Threshold
+SELECT 
+    P.Plant_Name,
+    P.Stock_Quantity,
+    P.Price
+FROM 
+    Plants P
+WHERE 
+    P.Stock_Quantity < 50
+ORDER BY 
+    P.Stock_Quantity ASC;
+
+
+3. Orders and Their Details
+
+SELECT 
+    O.Order_ID,
+    C.Customer_Name,
+    O.Order_Date,
+    P.Plant_Name,
+    OD.Quantity,
+    OD.Unit_Price
+FROM 
+    Orders O
+JOIN 
+    Customers C ON O.Customer_ID = C.Customer_ID
+JOIN 
+    OrderDetails OD ON O.Order_ID = OD.Order_ID
+JOIN 
+    Plants P ON OD.Plant_ID = P.Plant_ID
+ORDER BY 
+    O.Order_Date DESC;
+
+
+
+4. Top-Selling Plants
+SELECT * FROM (
+    SELECT 
+        P.Plant_Name,
+        SUM(OD.Quantity) AS Total_Sold
+    FROM 
+        OrderDetails OD
+    JOIN 
+        Plants P ON OD.Plant_ID = P.Plant_ID
+    GROUP BY 
+        P.Plant_ID, P.Plant_Name
+    ORDER BY 
+        Total_Sold DESC
+) 
+WHERE ROWNUM <= 5;
+
+
+
+
+
+5. Supplier Information for Each Plant
+SELECT 
+    P.Plant_Name,
+    S.Supplier_Name
+FROM 
+    Plants P
+JOIN 
+    Plant_Suppliers PS ON P.Plant_ID = PS.Plant_ID
+JOIN 
+    Suppliers S ON PS.Supplier_ID = S.Supplier_ID
+ORDER BY 
+    P.Plant_Name;
+
+
+
+
+
+6. Monthly Sales Report
+SELECT 
+    TRUNC(O.Order_Date, 'MM') AS Sales_Month,
+    SUM(O.Total_Amount) AS Total_Sales
+FROM 
+    Orders O
+GROUP BY 
+    TRUNC(O.Order_Date, 'MM')
+ORDER BY 
+    Sales_Month DESC;
+
+
+
+
+7. Most Profitable Plant
+SELECT * FROM (
+    SELECT 
+        P.Plant_Name,
+        SUM(OD.Quantity * OD.Unit_Price) AS Total_Revenue
+    FROM 
+        OrderDetails OD
+    JOIN 
+        Plants P ON OD.Plant_ID = P.Plant_ID
+    GROUP BY 
+        P.Plant_ID, P.Plant_Name
+    ORDER BY 
+        Total_Revenue DESC
+) 
+WHERE ROWNUM = 1;
+
+
+
+
+
+8. Customer Order Count
+SELECT 
+    C.Customer_Name,
+    COUNT(O.Order_ID) AS Number_of_Orders
+FROM 
+    Customers C
+LEFT JOIN 
+    Orders O ON C.Customer_ID = O.Customer_ID
+GROUP BY 
+    C.Customer_ID
+ORDER BY 
+    Number_of_Orders DESC;
+
+
+
+
+9. Plants with Supplier Information
+SELECT 
+    P.Plant_Name,
+    COUNT(PS.Supplier_ID) AS Number_of_Suppliers
+FROM 
+    Plants P
+JOIN 
+    Plant_Suppliers PS ON P.Plant_ID = PS.Plant_ID
+GROUP BY 
+    P.Plant_ID
+HAVING 
+    COUNT(PS.Supplier_ID) > 1;
+

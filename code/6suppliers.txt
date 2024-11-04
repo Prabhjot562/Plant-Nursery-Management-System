@@ -1,0 +1,21 @@
+CREATE TABLE Suppliers (
+    Supplier_ID INT PRIMARY KEY,
+    Supplier_Name VARCHAR(100) NOT NULL,
+    Contact_Number VARCHAR(15),
+    Email VARCHAR(50) UNIQUE,
+    Address VARCHAR(200)
+);
+
+
+
+
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(1, 'Green Thumb Supplies', '5551234567', 'info@greenthumb.com', '1001 Garden St.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(2, 'Plant World Wholesale', '5559876543', 'sales@plantworld.com', '2020 Nursery Ln.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(3, 'Herbal Gardens', '5558765432', 'contact@herbalgardens.com', '1500 Herb Ave.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(4, 'Succulent Solutions', '5556543210', 'service@succulentsolutions.com', '3300 Succulent St.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(5, 'Blooming Beauty', '5553210987', 'info@bloomingbeauty.com', '600 Flower Rd.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(6, 'Leafy Green Supplies', '5557890123', 'contact@leafygreen.com', '450 Greenway Ave.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(7, 'Foliage Friends', '5552345678', 'support@foliagefriends.com', '2300 Leaf St.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(8, 'Vineyard Vines', '5558765431', 'vineyard@vines.com', '1245 Vine Ln.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(9, 'Herb Haven', '5559087654', 'info@herbhaven.com', '789 Herb Rd.');
+INSERT INTO Suppliers (Supplier_ID, Supplier_Name, Contact_Number, Email, Address) VALUES(10, 'Garden Essentials', '5553456789', 'contact@gardenessentials.com', '850 Gardener Blvd.');

@@ -1,0 +1,21 @@
+CREATE TABLE Customers (
+    Customer_ID INT PRIMARY KEY,
+    Customer_Name VARCHAR(100) NOT NULL,
+    Address VARCHAR(200),
+    Contact_Number VARCHAR(15),
+    Email VARCHAR(50) UNIQUE,
+    Loyalty_Points INT DEFAULT 0
+);
+
+
+
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(1, 'John Doe', '123 Green Street', '1234567890', 'johndoe@example.com', 10);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(2, 'Jane Smith', '456 Blue Avenue', '0987654321', 'janesmith@example.com', 25);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(3, 'Alice Johnson', '789 Yellow Blvd', '1112223333', 'alicej@example.com', 15);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(4, 'Bob Brown', '101 Purple Road', '4445556666', 'bobbrown@example.com', 30);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(5, 'Emma White', '500 Red Drive', '5551112222', 'emmawhite@example.com', 12);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(6, 'Chris Black', '789 Orange St.', '5553334444', 'chrisblack@example.com', 20);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(7, 'Liam Green', '200 Aqua Ln', '5555556666', 'liamgreen@example.com', 18);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(8, 'Sophia Blue', '900 Indigo Ave', '5557778888', 'sophiablue@example.com', 5);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(9, 'James Silver', '300 Violet Ct', '5559990000', 'jamessilver@example.com', 8);
+INSERT INTO Customers (Customer_ID, Customer_Name, Address, Contact_Number, Email, Loyalty_Points) VALUES(10, 'Olivia Gold', '123 Rainbow Rd', '5551231234', 'oliviagold@example.com', 22);

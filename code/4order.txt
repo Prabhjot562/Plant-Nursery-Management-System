@@ -1,0 +1,26 @@
+CREATE TABLE Orders (
+    Order_ID INT PRIMARY KEY,
+    Customer_ID INT,
+    Order_Date DATE,
+    Total_Amount DECIMAL(10, 2) NOT NULL,
+    Order_Status VARCHAR(20) DEFAULT 'Pending',
+    FOREIGN KEY (Customer_ID) REFERENCES Customers(Customer_ID)
+);
+
+
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES(1, 1, 45.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES(2, 2, '26-OCT-2024', 36.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (3, 3, '27-OCT-2024', 30.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (4, 4, '28-OCT-2024', 50.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (5, 5, '29-OCT-2024', 25.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (6, 6, '30-OCT-2024', 40.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (7, 7, '31-OCT-2024', 33.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (8, 8, '01-NOV-2024', 15.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (9, 9, '02-NOV-2024', 20.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (10, 10, '03-NOV-2024', 28.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (11, 1, '12-OCT-2024', 60.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (12, 2, '13-OCT-2024', 25.00, 'Pending');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (13, 3, '14-OCT-2024', 47.50, 'Shipped');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (14, 1, '15-OCT-2024', 40.00, 'Completed');
+INSERT INTO Orders (Order_ID, Customer_ID, Order_Date, Total_Amount, Order_Status) VALUES (15, 2, '16-OCT-2024', 30.00, 'Cancelled');
+
