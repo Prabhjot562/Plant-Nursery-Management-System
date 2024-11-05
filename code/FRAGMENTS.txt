@@ -1,0 +1,35 @@
+
+-- Fragment for essential plant information
+CREATE TABLE Plants_Basic_Info AS
+SELECT Plant_ID, Plant_Name, Category_ID, Price
+FROM Plants;
+
+
+
+
+
+
+-- Fragment for orders with 'Pending' status
+CREATE TABLE Orders_Pending AS
+SELECT * FROM Orders
+WHERE Order_Status = 'Pending';
+
+-- Fragment for orders with 'Completed' status
+CREATE TABLE Orders_Completed AS
+SELECT * FROM Orders
+WHERE Order_Status = 'Completed';
+
+
+
+
+
+
+-- Fragment for order details with low quantity (<=10)
+CREATE TABLE Order_LowQuantity AS
+SELECT * FROM OrderDetails
+WHERE Quantity <= 2;
+
+-- Fragment for order details with high quantity (>10)
+CREATE TABLE Order_HighQuantity AS
+SELECT * FROM OrderDetails
+WHERE Quantity > 2;
